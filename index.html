@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
+    <title>Bookmark landing page</title>
 
     <link
       rel="icon"
@@ -12,38 +13,102 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./public/styles.css" />
-    <title>Bookmark landing page</title>
+    <script src="./public/index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/f1c1c1e611.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body class="text-lg font-rubik">
+  <body class="text-lg font-rubik text-neutral-GrayishBlue relative">
     <!-- header section -->
-    <header class="text-sm">
-      <nav class="container py-10 flex items-center gap-16">
-        <a href="./index.html" class="inline-block"
-          ><img src="./images/logo-bookmark.svg" alt="bookmark's page logo"
-        /></a>
-        <ul class="ml-auto flex gap-16 items-center tracking-wider">
-          <li
-            class="text-neutral-VeryDarkBlue hover:text-primary-SoftRed uppercase transition-colors cursor-pointer"
+    <header class="text-sm h-[108px]">
+      <div class="overlay">
+        <nav class="container py-10 flex items-center justify-between relative">
+          <a
+            href="./index.html"
+            class="inline-block py-1 px-2.5 bg-white rounded"
+            ><img src="./images/logo-bookmark.svg" alt="bookmark's page logo"
+          /></a>
+          <div class="menu-btn md:hidden">
+            <button class="open-btn text-lg">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <div
+            class="navigations w-full h-screen md:w-auto md:h-auto absolute md:relative top-full left-0 hidden md:flex flex-col md:flex-row md:justify-between items-center md:gap-16"
           >
-            <a href="#features">Features</a>
-          </li>
-          <li
-            class="text-neutral-VeryDarkBlue hover:text-primary-SoftRed uppercase transition-colors cursor-pointer"
-          >
-            <a href="#pricing">Pricing</a>
-          </li>
-          <li
-            class="text-neutral-VeryDarkBlue hover:text-primary-SoftRed uppercase transition-colors cursor-pointer"
-          >
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-        <button class="btn orange-btn uppercase tracking-wider">Login</button>
-      </nav>
+            <ul
+              class="w-full px-8 md:px-0 md:flex gap-16 items-center text-center tracking-wider text-xl md:text-sm"
+            >
+              <li
+                class="border-t md:border-0 border-neutral-GrayishBlue text-white md:text-neutral-VeryDarkBlue hover:text-primary-SoftRed uppercase transition-colors cursor-pointer"
+              >
+                <a class="py-6 md:p-0 block" href="#features">Features</a>
+              </li>
+              <li
+                class="border-t md:border-0 border-neutral-GrayishBlue text-white md:text-neutral-VeryDarkBlue hover:text-primary-SoftRed uppercase transition-colors cursor-pointer"
+              >
+                <a class="py-6 md:p-0 block" href="#pricing">Pricing</a>
+              </li>
+              <li
+                class="border-t md:border-0 border-neutral-GrayishBlue text-white md:text-neutral-VeryDarkBlue hover:text-primary-SoftRed uppercase transition-colors cursor-pointer"
+              >
+                <a class="py-6 md:p-0 block" href="#contact">Contact</a>
+              </li>
+            </ul>
+            <div class="btn-container w-full md:w-auto px-8 md:px-0">
+              <button
+                class="btn md:orange-btn w-full text-xl md:text-sm text-white uppercase tracking-wider font-medium"
+              >
+                Login
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
     <!-- hero section -->
-    <main>
-      <section class="container"></section>
+    <main class="overflow-hidden">
+      <section
+        class="container flex items-center justify-between flex-col lg:flex-row"
+      >
+        <div id="hero-txt-content" class="order-2 text-center md:text-start">
+          <h1
+            class="mb-8 text-3xl md:text-5xl font-medium text-neutral-VeryDarkBlue"
+          >
+            A Simple Bookmark Manager
+          </h1>
+          <p class="max-w-[500px] mb-8 text-base md:text-lg">
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <div
+            class="btns-container flex items-center justify-center sm:justify-start gap-4 text-sm font-medium"
+          >
+            <button
+              class="btn border-primary-SoftBlue hover:bg-white hover:text-primary-SoftBlue text-white bg-primary-SoftBlue shadow-primary-SoftBlue/20"
+            >
+              Get it on Chrome
+            </button>
+            <button
+              class="btn hover:border-neutral-VeryDarkBlue hover:bg-white text-neutral-VeryDarkBlue bg-neutral-GrayishBlue/10 shadow-neutral-VeryDarkBlue/10"
+            >
+              Get it on Firefox
+            </button>
+          </div>
+        </div>
+        <div class="hero-img-holder lg:order-last relative">
+          <img
+            src="./images/illustration-hero.svg"
+            class="relative"
+            alt="hero section image"
+          />
+          <span
+            class="h-[240px] w-full absolute bottom-0 -right-1/3 bg-primary-SoftBlue rounded-l-full -z-10"
+          ></span>
+        </div>
+      </section>
     </main>
     <section id="features"></section>
     <section id="pricing"></section>

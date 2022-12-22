@@ -5,9 +5,18 @@
 
 @layer components {
   .btn {
-    @apply py-2 px-8 border-2 rounded-md cursor-pointer select-none text-white transition-colors shadow-md;
+    @apply p-2 px-3 md:px-8 border-2 rounded-md cursor-pointer select-none  transition-colors shadow-md;
   }
   .orange-btn {
-    @apply border-primary-SoftRed bg-primary-SoftRed hover:bg-white hover:text-primary-SoftRed;
+    @apply border-primary-SoftRed text-white bg-primary-SoftRed hover:bg-white hover:text-primary-SoftRed;
+  }
+  .overlay {
+    @apply h-auto bg-transparent md:bg-transparent w-full md:h-auto top-0 left-0 z-10;
+  }
+  .overlay.active {
+    @apply fixed h-screen bg-neutral-VeryDarkBlue/90;
+  }
+  .overlay.active .navigations {
+    @apply flex;
   }
 }
