@@ -14,10 +14,10 @@
     />
     <link rel="stylesheet" href="./public/styles.css" />
     <script src="./public/index.js" defer></script>
-    <script
+    <!-- <script
       src="https://kit.fontawesome.com/f1c1c1e611.js"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
   </head>
   <body class="text-lg font-rubik text-neutral-GrayishBlue relative">
     <!-- header section -->
@@ -43,7 +43,9 @@
               <li
                 class="border-t md:border-0 border-neutral-GrayishBlue text-white md:text-neutral-VeryDarkBlue hover:text-primary-SoftRed uppercase transition-colors cursor-pointer"
               >
-                <a class="py-6 md:p-0 block" href="#features">Features</a>
+                <a class="py-6 md:p-0 block" href="#features-section"
+                  >Features</a
+                >
               </li>
               <li
                 class="border-t md:border-0 border-neutral-GrayishBlue text-white md:text-neutral-VeryDarkBlue hover:text-primary-SoftRed uppercase transition-colors cursor-pointer"
@@ -68,7 +70,7 @@
       </div>
     </header>
     <!-- hero section -->
-    <main class="overflow-hidden">
+    <main class="overflow-hidden py-10">
       <section
         class="container flex items-center justify-between flex-col lg:flex-row"
       >
@@ -86,11 +88,7 @@
           <div
             class="btns-container flex items-center justify-center sm:justify-start gap-4 text-sm font-medium"
           >
-            <button
-              class="btn border-primary-SoftBlue hover:bg-white hover:text-primary-SoftBlue text-white bg-primary-SoftBlue shadow-primary-SoftBlue/20"
-            >
-              Get it on Chrome
-            </button>
+            <button class="btn blue-btn">Get it on Chrome</button>
             <button
               class="btn hover:border-neutral-VeryDarkBlue hover:bg-white text-neutral-VeryDarkBlue bg-neutral-GrayishBlue/10 shadow-neutral-VeryDarkBlue/10"
             >
@@ -105,14 +103,242 @@
             alt="hero section image"
           />
           <span
-            class="h-[240px] w-full absolute bottom-0 -right-1/3 bg-primary-SoftBlue rounded-l-full -z-10"
+            class="h-[240px] w-[calc(100%+120px)] absolute bottom-0 -right-1/3 bg-primary-SoftBlue rounded-l-full -z-10"
           ></span>
         </div>
       </section>
     </main>
-    <section id="features"></section>
-    <section id="pricing"></section>
-    <section id="contact"></section>
+    <!-- features section -->
+    <section id="features-section" class="py-10">
+      <div class="section-heading-container mb-10 text-center">
+        <h1 class="section-title">Features</h1>
+        <p class="section-description">
+          Our aim is to make it quick and easy for you to access your favourite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go.
+        </p>
+      </div>
+      <ul
+        id="features"
+        class="container text-center md:flex justify-center items-center"
+      >
+        <li class="border-t md:border-t-0 border-b border-neutral-GrayishBlue">
+          <a href="" class="feature active">Simple Booking</a>
+        </li>
+        <li class="border-b border-neutral-GrayishBlue">
+          <a href="" class="feature">Speedy Searching</a>
+        </li>
+        <li class="border-b border-neutral-GrayishBlue">
+          <a href="" class="feature">Easy Sharing</a>
+        </li>
+      </ul>
+      <div id="tabs-container" class="container pt-10">
+        <div class="tab justify-center items-center gap-8 md:flex" data-id="1">
+          <!-- md:flex -->
+          <div class="img-holder mb-10 md:mb-0 pb-10 md:pb -0 relative">
+            <img src="./images/illustration-features-tab-1.svg" alt="" />
+            <span
+              class="h-[200px] md:h-[240px] w-[calc(100%+120px)] absolute bottom-0 -left-2/3 bg-primary-SoftBlue rounded-r-full -z-10"
+            ></span>
+          </div>
+          <div class="tab-description max-w-[550px] text-center md:text-start">
+            <h2
+              class="mb-4 text-neutral-VeryDarkBlue font-semibold text-2xl md:text-3xl"
+            >
+              Bookmark in one click
+            </h2>
+            <p class="">
+              Organize your bookmarks however you like. Our simple drag-and-drop
+              interface gives you complete control over how you manage your
+              favourite sites.
+            </p>
+            <button
+              class="btn mt-4 text-white bg-primary-SoftBlue text-sm"
+              type="button"
+            >
+              More Info
+            </button>
+          </div>
+        </div>
+        <div class="tab justify-center items-center gap-8 hidden" data-id="2">
+          <div class="img-holder mb-10 md:mb-0 pb-10 md:pb -0 relative">
+            <img src="./images/illustration-features-tab-2.svg" alt="" />
+            <span
+              class="h-[200px] md:h-[240px] w-[calc(100%+120px)] absolute bottom-0 -left-2/3 bg-primary-SoftBlue rounded-r-full -z-10"
+            ></span>
+          </div>
+          <div class="tab-description max-w-[600px] text-center md:text-start">
+            <h2
+              class="mb-4 text-neutral-VeryDarkBlue font-semibold text-2xl md:text-3xl"
+            >
+              Intelligent search
+            </h2>
+            <p class="">
+              Our powerful search feature will help you find saved sites in no
+              time at all. No need to trawl through all of your bookmarks.
+            </p>
+            <button
+              class="btn mt-4 text-white bg-primary-SoftBlue text-sm"
+              type="button"
+            >
+              More Info
+            </button>
+          </div>
+        </div>
+        <div class="tab justify-center items-center gap-8 hidden" data-id="3">
+          <div class="img-holder mb-10 md:mb-0 pb-10 md:pb -0 relative">
+            <img src="./images/illustration-features-tab-3.svg" alt="" />
+            <span
+              class="h-[200px] md:h-[240px] w-[calc(100%+120px)] absolute bottom-0 -left-2/3 bg-primary-SoftBlue rounded-r-full -z-10"
+            ></span>
+          </div>
+          <div class="tab-description max-w-[600px] text-center md:text-start">
+            <h2
+              class="mb-4 text-neutral-VeryDarkBlue font-semibold text-2xl md:text-3xl"
+            >
+              Share your bookmarks
+            </h2>
+            <p class="">
+              Easily share your bookmarks and collections with others. Create a
+              shareable link that you can send at the click of a button.
+            </p>
+            <button
+              class="btn mt-4 text-white bg-primary-SoftBlue text-sm"
+              type="button"
+            >
+              More Info
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- extensions section -->
+    <section id="extensions-section">
+      <div class="container py-10">
+        <div class="section-heading-container mb-16 text-center">
+          <h1 class="section-title">Download the extension</h1>
+          <p class="section-description">
+            We’ve got more browsers in the pipeline. Please do let us know if
+            you’ve got a favourite you’d like us to prioritize.
+          </p>
+        </div>
+        <div
+          class="cards-container flex justify-center flex-col md:flex-row gap-10"
+        >
+          <article class="card md:-translate-y-8">
+            <img
+              src="./images/logo-chrome.svg"
+              alt="google chrome's logo"
+              class="w-20 mx-auto mb-8"
+            />
+            <h2 class="mb-2 text-neutral-VeryDarkBlue text-xl font-semibold">
+              Add to Chrome
+            </h2>
+            <p class="text-sm mb-4">Minimum version 62</p>
+            <img src="./images/bg-dots.svg" alt="" />
+            <button class="btn m-6 text-sm blue-btn">
+              Add & Install Extension
+            </button>
+          </article>
+          <article class="card">
+            <img
+              src="./images/logo-firefox.svg"
+              alt="google Firefox's logo"
+              class="w-20 mx-auto mb-8"
+            />
+            <h2 class="mb-2 text-neutral-VeryDarkBlue text-xl font-semibold">
+              Add to Firefox
+            </h2>
+            <p class="text-sm mb-4">Minimum version 55</p>
+            <img src="./images/bg-dots.svg" alt="" />
+            <button class="btn m-6 text-sm blue-btn">
+              Add & Install Extension
+            </button>
+          </article>
+          <article class="card md:translate-y-8">
+            <img
+              src="./images/logo-opera.svg"
+              alt="google opera's logo"
+              class="w-20 mx-auto mb-8"
+            />
+            <h2 class="mb-2 text-neutral-VeryDarkBlue text-xl font-semibold">
+              Add to Opera
+            </h2>
+            <p class="text-sm mb-4">Minimum version 46</p>
+            <img src="./images/bg-dots.svg" alt="" />
+            <button class="btn m-6 text-sm blue-btn">
+              Add & Install Extension
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- questions section -->
+    <section id="questions-section">
+      <div class="container pt-20 pb-10">
+        <div class="section-heading-container mb-16 text-center">
+          <h1 class="section-title capitalize">Frequently asked questions</h1>
+          <p class="section-description">
+            Here are some of our FAQs. If you have any other questions you’d
+            like answered please feel free to email us.
+          </p>
+        </div>
+        <ul class="border-y">
+          <li class="question">
+            <div
+              class="py-4 text-neutral-VeryDarkBlue hover:text-primary-SoftRed transition-colors cursor-pointer"
+            >
+              What is Bookmark?
+            </div>
+            <p class="text-base overflow-hidden transition-all">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+              quis quam ornare mattis.
+            </p>
+          </li>
+          <li class="question">
+            <div
+              class="py-4 text-neutral-VeryDarkBlue hover:text-primary-SoftRed transition-colors cursor-pointer"
+            >
+              How can I request a new browser?
+            </div>
+            <p class="h-0 text-base overflow-hidden transition-all">
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+              massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
+              eros aliquet convallis ultricies. Mauris augue massa, ultricies
+              non ligula. Suspendisse imperdie tVivamus luctus eros aliquet
+              convallis ultricies. Mauris augue massa, ultricies non ligula.
+              Suspendisse imperdiet.
+            </p>
+          </li>
+          <li class="question">
+            <div
+              class="py-4 text-neutral-VeryDarkBlue hover:text-primary-SoftRed transition-colors cursor-pointer"
+            >
+              Is there a mobile app?
+            </div>
+            <p class="h-0 text-base overflow-hidden transition-all">
+              Sed consectetur quam id neque fermentum accumsan. Praesent luctus
+              vestibulum dolor, ut condimentum urna vulputate eget. Cras in
+              ligula quis est pharetra mattis sit amet pharetra purus. Sed
+              sollicitudin ex et ultricies bibendum.
+            </p>
+          </li>
+          <li class="question">
+            <div
+              class="py-4 text-neutral-VeryDarkBlue hover:text-primary-SoftRed transition-colors cursor-pointer"
+            >
+              What about other Chromium browsers?
+            </div>
+            <p class="h-0 text-base overflow-hidden transition-all">
+              Integer condimentum ipsum id imperdiet finibus. Vivamus in
+              placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida
+              pellentesque non ut velit.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
     <!-- footer section -->
     <footer>
       <p class="attribution text-sm text-center">
